@@ -20,7 +20,7 @@ setup(
     author='Rajiv Subramanian M',
     author_email='rajiv.m1991@gmail.com',
     url='http://github.com/rajivm1991/django-materialize-form',
-    download_url='https://github.com/rajivm1991/django-materialize-form/tarball/0.1',
+    download_url='https://github.com/rajivm1991/django-materialize-form/tarball/0.1.1',
     install_requires=['Django', ],
     license='MIT',
     packages=find_packages(),
