@@ -1,5 +1,14 @@
+=======================
 Django materialize form
 =======================
+
+Materialize design for Django Form.
+
+A simple Django template tag to work with `Materialize <http://http://materializecss.com/>`_
+
+
+Usage
+======
 
 Add "materializeform" to your INSTALLED_APPS.
 
