@@ -1,0 +1,37 @@
+{% load materialize %}
+
+<div class="input-field col {{ classes.col }}">
+    {% if field|is_multiple_checkbox or field|is_radio %}
+        {% if field.auto_id %}
+            <label class="active" for="{{ field.auto_id }}">{{ field.label }}</label>
+        {% endif %}
+        <div style="margin-bottom: 20px">
+            {% for choice in field %}
+            <span style="display: block;">
+                {{choice.tag}}
+                <label for="{{ field.auto_id }}_{{forloop.counter0}}">{{ choice.choice_label }}</label>
+            </span>
+            {% endfor %}
+        </div>
+    {% elif field|is_multi_select %}
+        <div style="margin-bottom: 10px; margin-top: 15px;">
+        {{ field }}
+        </div>
+        {% if field.auto_id %}
+            <label class="active" for="{{ field.auto_id }}">{{ field.label }}</label>
+        {% endif %}
+    {% else %}
+        {{ field }}
+        {% if field.auto_id %}
+            <label for="{{ field.auto_id }}">{{ field.label }}</label>
+        {% endif %}
+    {% endif %}
+
+    {% for error in field.errors %}
+        <span class="help-block error {{ form.error_css_class }}">{{ error }}</span>
+    {% endfor %}
+
+    {% if field.help_text %}
+        <span class="help-block">{{ field.help_text|safe }}</span>
+    {% endif %}
+</div>
