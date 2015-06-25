@@ -3,7 +3,7 @@ Django materialize form
 
 Materialize design for Django Form.
 
-A simple Django template tag to work with `Materialize CSS <http://http://materializecss.com/>`_
+A simple Django template tag to work with `Materialize CSS <http://materializecss.com/>`_
 
 Installation
 ------------
